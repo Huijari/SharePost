@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body {
+      color: #333;
+      font-family: 'Open Sans';
+      line-height: 1.5em;
+      margin: 16px auto;
+      max-width: 40em;
+    }
+  </style>
+</head>
+<body>
+  <main></main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+  <script>
+marked.setOptions({ sanitize: true });
+const id = location.hash.substr(1);
+fetch(`/api/article/${id}`)
+  .then(response => response.json())
+  .then(article => document.querySelector('main').innerHTML = marked(article.content));
+  </script>
+</body>
+</html>

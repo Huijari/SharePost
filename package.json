@@ -1,0 +1,10 @@
+{
+  "name": "mongo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "^2.2.11",
+    "restify": "^4.3.0"
+  }
+}
