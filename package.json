@@ -1,7 +1,7 @@
 {
-  "name": "mongo",
+  "name": "SharePost",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "license": "MIT",
   "dependencies": {
     "mongodb": "^2.2.11",
